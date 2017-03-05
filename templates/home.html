@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %} Test Task {% endblock%}
+
+{% block content %}
+
+<div class="title">
+  <h1>Calculate word occurrences</h1>
+</div>
+
+<div class="input-data">
+  <form method="POST" action="{% url 'home' %}" id="form">
+    {% csrf_token %}
+    <div>
+      <textarea name="text" rows="15" placeholder="Please insert text" style="width: 100%;">{{ text }}</textarea>
+    </div>
+    <input type="submit" />
+  </form>
+</div>
+
+<div class="results">
+{% if results %}
+  {% for item in results %}
+    {{ item.word }} : {{ item.stat }}
+    <br />
+  {% endfor %}
+{% else %}
+  <h2>No results</h2>
+{% endif %}
+</div>
+
+{% endblock %}
