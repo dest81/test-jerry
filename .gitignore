@@ -1,0 +1,14 @@
+*.sublime-workspace
+*.py[cod]
+__pycache__
+logs
+*.log
+*.mo
+*.pot
+*~
+*.swp
+*.swo
+.env
+*.db
+.vagrant/
+*.sqlite3

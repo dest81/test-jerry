@@ -10,8 +10,8 @@ def text_to_word(text):
 
 
 def text_to_sentences(text):
-    # returns array of words groupped by senteces
-    # [[ word1, word2, .., word2], [ wor1, word2, .., word2], ...]
+    # returns array of words groupped by sentences
+    # [[ word1, word2, .., word2], [ word1, word2, .., word2], ...]
     sentences = re.split(r'(?<=[^A-Z].[.?]) +(?=[A-Z])', text)
     return [text_to_word(sentence) for sentence in sentences]
 
